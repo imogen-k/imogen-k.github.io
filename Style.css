@@ -1,0 +1,101 @@
+html {
+  height: 100vh;
+  border: 20px solid black;
+  border-radius: 7px;
+}
+
+h1 {
+  color: #2F2828;
+  font-family: DIN Condensed;
+  font-size: 40px;
+  line-height: 0.1;
+}
+p {
+  color: #685A56;
+  font-family: DIN Condensed;
+  font-size: 16px;
+
+}
+
+body {
+  background-color: #CFB7BA;
+}
+
+#name {
+  line-height: 0.1;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+}
+
+.ml3 {
+  font-weight: 100;
+  font-size: 20px;
+}
+
+
+#buttons {
+ text-align: center;
+ margin-top: 50px;
+}
+
+#new {
+
+}
+
+
+#draw-border {
+
+}
+
+button {
+  border: 0;
+  background: none;
+  text-transform: uppercase;
+  color: #2F2828;
+  font-weight: bold;
+  position: relative;
+  outline: none;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+
+button::before, button::after {
+  box-sizing: inherit;
+  position: absolute;
+  content: '';
+  border: 2px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+button::after {
+  bottom: 0;
+  right: 0;
+}
+
+button::before {
+  top: 0;
+  left: 0;
+}
+
+button:hover::before, button:hover::after {
+  width: 100%;
+  height: 100%;
+}
+
+button:hover::before {
+  border-top-color: #685A56;
+  border-right-color: #685A56;
+  transition: width 0.3s ease-out, height 0.3s ease-out 0.3s;
+}
+
+button:hover::after {
+  border-bottom-color: #685A56;
+  border-left-color: #685A56;
+  transition: border-color 0s ease-out 0.6s, width 0.3s ease-out 0.6s, height 0.3s ease-out 1s;
+}
